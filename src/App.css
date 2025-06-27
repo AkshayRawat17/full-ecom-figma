@@ -1,42 +1,375 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Header Component CSS */
+
+.header {
+  height: 50px;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.header-heading {
+  width: 86%;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.span-class {
+  font-weight: 500;
+  margin-left: 8px;
+  text-decoration: underline;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-language {
+  width: 14%;
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header .header-language #language {
+  background: none;
+  border: none;
+  color: white;
 }
 
-.card {
-  padding: 2em;
+/* Navbar Component CSS */
+
+.navbar {
+  height: 70px;
+  padding: 25px 0 10px 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid gray;
 }
 
-.read-the-docs {
-  color: #888;
+.navbar .navbar-heading {
+  width: 6%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .navbar-links {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .navbar-contents {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar .navbar-heading p {
+  font-weight: 550;
+  font-size: 2rem;
+}
+
+.navbar .navbar-links li {
+  padding-top: 10px;
+  list-style-type: none;
+}
+
+.navbar .navbar-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar .navbar-links li a.active {
+  border-bottom: 0.5px solid black;
+}
+
+.navbar .navbar-contents .input-box {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  max-width: 400px;
+  border: 1px solid #e4dbdb;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+}
+
+.navbar .navbar-contents .input-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  margin-left: 15px;
+  font-size: 16px;
+  background-color: #f8f2f2;
+}
+
+.navbar .navbar-contents .input-box .material-symbols-outlined {
+  border: none;
+  padding: 7px;
+  padding-top: 8.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f8f2f2;
+}
+
+.navbar .navbar-contents .wishlist .material-symbols-outlined,
+.navbar .navbar-contents .add-to-cart .material-symbols-outlined {
+  padding-top: 10px;
+}
+
+/* Sidebar Image CSS */
+
+.sidebar-image {
+  height: 450px;
+  display: flex;
+}
+
+.sidebar-image .sidebar {
+  width: 20%;
+  height: 80%;
+  padding: 10px 10px 10px 123px;
+  border-right: 1px solid gray;
+}
+
+.sidebar-image .sidebar .list-item {
+  margin: 20px 0;
+  list-style-type: none;
+}
+
+.sidebar-image .image {
+  padding: 40px;
+  width: 80%;
+}
+
+.sidebar-image .image img {
+  width: 91%;
+}
+
+.sidebar-image .sidebar .list-item .material-symbols-outlined {
+  font-size: 1rem;
+  float: right;
+  font-weight: 500;
+}
+
+/* Today CSS */
+
+/* .today {
+  height: 450px;
+  background-color: blue;
+  padding: 20px;
+}
+
+.today .today-heading {
+  height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin: 0 95px;
+}
+
+.today .today-heading .span-class {
+  height: 100%;
+  width: 15px;
+  background-color: red;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.today .today-heading p {
+  color: red;
+} */
+
+/*Signup Component CSS */
+
+.signup-container {
+  height: 100vh;
+  display: flex;
+  width: 100vw;
+}
+
+.signup-container .left-container,
+.signup-container .right-container {
+  width: 50%;
+  height: 100%;
+}
+
+.signup-container .left-container img {
+  height: 90%;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.signup-container .right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-container .right-container .form-container {
+  height: 60%;
+  width: 65%;
+}
+
+.signup-container .right-container .form-container .form-content {
+  font-size: 1.3rem;
+}
+
+.signup-container .right-container .form-container .form-content h2 {
+  padding-bottom: 10px;
+}
+
+.signup-container .right-container .form-container .input-fields {
+  margin-bottom: 20px;
+}
+
+.signup-container .right-container .form-container .input-fields input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.signup-container .right-container .form-container .buttons button {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid gray;
+}
+
+.signup-container .right-container .form-container .buttons .btn-submit {
+  margin-bottom: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+.signup-container .right-container .form-container .buttons button img {
+  height: 20px;
+}
+
+.signup-container .right-container .form-container .buttons .btn-img {
+  display: flex;
+  justify-content: center;
+}
+
+.signup-container .right-container .form-container .buttons p {
+  padding-top: 2px;
+  margin-left: 8px;
+}
+
+.signup-container .right-container .form-container .login {
+  width: 100%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  color: gray;
+}
+
+.signup-container .right-container .form-container .login .login-content {
+  margin-right: 8px;
+}
+
+.signup-container .right-container .form-container .login .login-para a {
+  text-decoration: none;
+  color: gray;
+  font-weight: 540;
+}
+
+.signup-container .right-container .form-container .login .login-para a:hover {
+  border-bottom: 1px solid gray;
+}
+
+/* Login Component CSS */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  width: 100vw;
+}
+
+.login-container .left-container,
+.login-container .right-container {
+  width: 50%;
+  height: 100%;
+}
+
+.login-container .left-container img {
+  height: 90%;
+  padding-top: 50px;
+  width: 100%;
+}
+
+.login-container .right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container .right-container .form-container {
+  height: 60%;
+  width: 65%;
+}
+
+.login-container .right-container .form-container .form-content {
+  font-size: 1.3rem;
+}
+
+.login-container .right-container .form-container .form-content h2 {
+  padding-bottom: 10px;
+}
+
+.login-container .right-container .form-container .input-fields {
+  margin-bottom: 20px;
+}
+
+.login-container .right-container .form-container .input-fields input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 1.2rem;
+}
+
+.login-container .right-container .form-container .buttons {
+  display: flex;
+}
+
+.login-container .right-container .form-container .buttons button {
+  width: 50%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid gray;
+}
+
+.login-container .right-container .form-container .buttons .btn-submit {
+  margin-bottom: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+.login-container .right-container .form-container .buttons button img {
+  height: 20px;
+}
+
+.login-container .right-container .form-container .buttons .btn-img {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: red;
+  font-size: 1.1rem;
+}
+
+.login-container .right-container .form-container .buttons p {
+  padding-top: 2px;
+  margin-left: 8px;
 }
